@@ -1,5 +1,9 @@
 function gps(s, x) {
-    // your code
+	// your code
+	if (x.length <= 1){
+        return 0
+    }
+
     let secondsConversion = s / 3600
     let left = 0;
     let right = 1
