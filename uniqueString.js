@@ -32,6 +32,6 @@ function uniqueString(str){
 	} else {
 	  return null;
 	}
-  }
+}
 
-  uniqueString("The Empire State Building")
+uniqueString("The Empire State Building")
