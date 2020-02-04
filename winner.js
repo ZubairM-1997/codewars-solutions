@@ -13,19 +13,20 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
 	while(firstAttacker){
 
 		if (firstAttacker === fighter1){
+
+			fighter2.health = fighter2.health - fighter1.damagePerAttack
 			if(fighter2.health > 0){
-				fighter2.health = fighter2.health - fighter1.damagePerAttack
 				firstAttacker = fighter2
 			} else {
-				return fighter1
+				return fighter1.toString()
 			}
 
-		} else {
+		} else if (firstAttacker === fighter2){
+			fighter1.health = fighter1.health - fighter2.damagePerAttack
 			if (fighter1.health > 0){
-				fighter1.health = fighter1.health - fighter2.damagePerAttack
 				firstAttacker = fighter1
 			} else {
-				return fighter2
+				return fighter2.toString()
 			}
 		}
 
